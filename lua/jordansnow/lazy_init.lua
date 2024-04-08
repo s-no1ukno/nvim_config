@@ -11,5 +11,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("jordansnow.lazy")
+-- require("lazy").setup("jordansnow.lazy")
+require("lazy").setup({ spec = "jordansnow.lazy", change_detection = { notify = false }})
 
