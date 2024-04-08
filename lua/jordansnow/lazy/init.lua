@@ -1,5 +1,4 @@
 return {
-  "folke/tokyonight.nvim",
   {
     "nvim-lua/plenary.nvim",
     name = "plenary"
@@ -12,5 +11,20 @@ return {
       }
     end
   },
-  "folke/zen-mode.nvim",
+
+  -- self-closing brackets
+  {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup({})
+    end
+  },
+
+  -- line and block comments
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end
+  },
 }
