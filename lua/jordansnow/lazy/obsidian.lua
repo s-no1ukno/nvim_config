@@ -34,6 +34,23 @@ return {
       min_chars = 2,
     },
 
+    notes_subdir = "",
+    new_notes_location = "notes_subdir",
+
+    -- Optional, customize how note file names are generated given the ID, target directory, and title.
+      ---@param spec { id: string, dir: obsidian.Path, title: string|? }
+      ---@return string|obsidian.Path The full path to the new note.
+    note_path_func = function(spec)
+      local idStr = tostring(spec.id)
+      local titleStr = tostring(spec.title)
+      local path = spec.dir / string.format("%s_%s", titleStr, idStr)
+      return path:with_suffix(".md")
+    end,
+
+    daily_notes = {
+      folder = "dailies/",
+    },
+
     mappings = {
       -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
       ["gf"] = {
