@@ -22,23 +22,23 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f",function()
+-- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<leader>f", function()
   vim.lsp.buf.format()
 end)
 vim.keymap.set("n", "<leader>F", "<cmd>EslintFixAll<CR>")
 
 -- remapping window jumping to one key press
-vim.keymap.set("n", "<C-h>", "<C-W>h")
-vim.keymap.set("n", "<C-j>", "<C-W>j")
-vim.keymap.set("n", "<C-k>", "<C-W>k")
-vim.keymap.set("n", "<C-l>", "<C-W>l")
+vim.keymap.set("n", "<leader>wh", "<C-W>h")
+vim.keymap.set("n", "<leader>wj", "<C-W>j")
+vim.keymap.set("n", "<leader>wk", "<C-W>k")
+vim.keymap.set("n", "<leader>wl", "<C-W>l")
 
--- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
--- vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+-- quickfix navigation
+vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 -- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 -- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
