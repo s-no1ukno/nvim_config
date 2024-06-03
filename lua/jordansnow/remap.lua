@@ -29,10 +29,10 @@ end)
 vim.keymap.set("n", "<leader>F", "<cmd>EslintFixAll<CR>")
 
 -- remapping window jumping to one key press
-vim.keymap.set("n", "<leader>wh", "<C-W>h")
-vim.keymap.set("n", "<leader>wj", "<C-W>j")
-vim.keymap.set("n", "<leader>wk", "<C-W>k")
-vim.keymap.set("n", "<leader>wl", "<C-W>l")
+vim.keymap.set("n", "<leader>h", "<C-W>h")
+vim.keymap.set("n", "<leader>l", "<C-W>l")
+vim.keymap.set("n", "<leader>j", "<C-W>j")
+vim.keymap.set("n", "<leader>k", "<C-W>k")
 
 -- quickfix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
